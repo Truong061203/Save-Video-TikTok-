@@ -7,6 +7,10 @@
     <meta name="description" content="Fastest tool to save TikTok videos in HD quality without watermark. Works perfectly on iOS, Android, and PC." />
     <meta name="keywords" content="tiktok downloader, tiksaver, no watermark, save tiktok, video download" />
     <meta name="theme-color" content="#0f172a" />
+    
+    <!-- FIX 404: Added a Data URI Favicon (Music Note Icon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -33,6 +37,7 @@
   <script type="importmap">
 {
   "imports": {
+    "react-dom/client": "https://esm.sh/react-dom@^18.2.0/client",
     "react-dom/": "https://esm.sh/react-dom@^18.2.0/",
     "react/": "https://esm.sh/react@^18.2.0/",
     "react": "https://esm.sh/react@^18.2.0",
@@ -44,5 +49,8 @@
 </head>
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
     <div id="root"></div>
+    
+    <!-- CRITICAL FIX: This loads your React App. Without this, the screen is black/white. -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
